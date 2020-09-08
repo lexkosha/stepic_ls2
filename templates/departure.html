@@ -35,7 +35,7 @@
     </nav>
   </header>
   <main class="container mt-3">
-    <h1 class="display-5 mt-4">Летим из {% if context.departures %}</h1>
+    <h1 class="display-5 mt-4">Летим {{ context.departures }}</h1>
     <p class="mb-4">Найдено {{ context|length }} туров, от {{ context.price|min }} до {{ context.price|max }} и от {{ context.night|min }} ночей до {{ context.night|max }} ночей</p>
     <!-- CARDS -->
     <div class="row mt-5">

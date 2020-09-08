@@ -28,7 +28,7 @@ def det_departures(url):
         'data': data,
         'night': night,
         'price': price,
-        'departures': departures,
+        'departures': departures.get(url),
     }
     return render_template('departure.html', context=context)
 
