@@ -199,4 +199,20 @@ def clear_data(d):
     return all_data
 
 
+# def get_price(d):
+#     all_data = []
+#     for key, value in d.items():
+#         all_data.append(value['price'])
+#     return all_data
+#
+#
+# def get_neght(d):
+#     all_data = []
+#     for key, value in d.items():
+#         all_data.append(value['nights'])
+#     return all_data
+#
+#
+# data_neght = get_neght(tours)
+# data_price = get_price(tours)
 data_list = clear_data(tours)

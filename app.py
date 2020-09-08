@@ -13,10 +13,24 @@ def get_index():
     return render_template('index.html', data=data)
 
 
-@app.route('/departures/')
-def det_departures():
+@app.route('/departures/<url>')
+def det_departures(url):
     """Направления"""
-    return render_template('departure.html')
+    data = []
+    night = []
+    price = []
+    for i in data_list:
+        if url == i['departure']:
+            data.append(i)
+            night.append(i['nights'])
+            price.append(i['price'])
+    context = {
+        'data': data,
+        'night': night,
+        'price': price,
+        'departures': departures,
+    }
+    return render_template('departure.html', context=context)
 
 
 @app.route('/tours/')

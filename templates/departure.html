@@ -35,8 +35,8 @@
     </nav>
   </header>
   <main class="container mt-3">
-    <h1 class="display-5 mt-4">Летим из Новосибирска</h1>
-    <p class="mb-4">Найдено 15 туров, от 26 000 до 84 600 и от 4 ночей до 15 ночей</p>
+    <h1 class="display-5 mt-4">Летим из {% if context.departures %}</h1>
+    <p class="mb-4">Найдено {{ context|length }} туров, от {{ context.price|min }} до {{ context.price|max }} и от {{ context.night|min }} ночей до {{ context.night|max }} ночей</p>
     <!-- CARDS -->
     <div class="row mt-5">
       <div class="col-4">
