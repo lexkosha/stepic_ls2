@@ -13,7 +13,7 @@ def get_index():
     return render_template('index.html', data=data)
 
 
-@app.route('/departures/<url>')
+@app.route('/departures/<url>/')
 def det_departures(url):
     """Направления"""
     data = []
